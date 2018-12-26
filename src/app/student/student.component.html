@@ -1,0 +1,20 @@
+<div>
+  <h3>Student</h3>
+  <form [formGroup]="studentform">
+    <div><label>Name:</label><input type="text" formControlName="name"></div>
+    <div class="eror-msg" *ngIf="(studentform.controls.name.touched) && studentform.controls.name.hasError('required')">Name is required</div>
+    <div><label>Email:</label><input type="text" formControlName="email"></div>
+    <div class="eror-msg" *ngIf="(studentform.controls.email.touched) && studentform.controls.email.hasError('required')">Email is required</div>
+    <div class="eror-msg" *ngIf="(studentform.controls.email.touched) && studentform.controls.email.hasError('email')">Enter valid email address</div>
+    <div><label>Age:</label><input type="text" formControlName="age"></div>
+    <div class="eror-msg" *ngIf="(studentform.controls.age.touched) && studentform.controls.age.hasError('required')">Age is required</div>
+    <div class="eror-msg" *ngIf="(studentform.controls.age.touched) && studentform.controls.age.hasError('min')">minimum age is 18</div>
+    <div class="eror-msg" *ngIf="(studentform.controls.age.touched) && studentform.controls.age.hasError('max')">maximum age is 110</div>
+    <div><label>Start Date:</label><input type="text" formControlName="startdate"></div>
+    <div><label>End Date:</label><input type="text" formControlName="enddate"></div>
+    <div class="eror-msg" *ngIf="studentform.hasError('Invalid Date')">Invalid Date</div>
+    <div class="eror-msg" *ngIf="studentform.hasError('Invalid Date Format')">Invalid Date Format</div>
+    <div><button>Submit</button>  <button>Reset</button></div>
+    <div *customIf="false">Welcome</div>
+  </form>
+</div>

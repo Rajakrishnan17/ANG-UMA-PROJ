@@ -1,0 +1,22 @@
+<div class="sign-in-form">
+  <h3>Sign In</h3>
+  <form [formGroup]="signinform">
+    <div class="form-controls">
+      <label>User Name</label>
+      <input type="text" formControlName="username" />
+      <div class="error-msg">
+        <span *ngIf="signinform.controls.username.touched && signinform.controls.username.hasError('required')">Please enter username</span>        
+      </div>
+    </div>
+    <div class="form-controls">
+      <label>Password</label>
+      <input type="password" formControlName="pwd"  />
+      <div class="error-msg">
+        <span *ngIf="signinform.controls.pwd.touched && signinform.controls.pwd.hasError('required')">Please enter password</span>
+      </div>
+    </div>
+    <div class="form-button">    
+      <button>Submit</button>
+    </div> 
+  </form>
+</div>

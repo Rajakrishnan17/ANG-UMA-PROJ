@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ANG-UMA-PROJ';
+  title:'app';
+  /*amt: number;
+  cost: number;
+  name: string;
+  img: string;
+  constructor(){  
+  }  
+  ngOnInit() {
+    this.amt=50;
+    this.cost = 12.89667;
+    this.img = "";
+  }*/
+ 
 }

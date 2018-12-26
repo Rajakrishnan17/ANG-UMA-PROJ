@@ -1,0 +1,36 @@
+
+.center {
+    text-align: center;
+}
+
+input[type='button'] {
+    margin: 10px 10px;
+    width: 65px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+    margin: 15px;
+    text-align: center;
+    position: relative;
+    left: 36%;
+}
+
+table button{
+    width:65px;
+}
